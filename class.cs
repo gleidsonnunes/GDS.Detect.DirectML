@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+
 public static class DirectMLSupportChecker
 {
     // Constantes e definições nativas
@@ -7,9 +9,9 @@ public static class DirectMLSupportChecker
 
     // GUIDs (Identificadores únicos) para as interfaces COM que queremos criar.
     // GUID de ID3D12Device
-    private static readonly Guid IID_ID3D12Device = new Guid("189819f1-1db6-4b57-be54-1821339b85f7");
+    private static readonly Guid IID_ID3D12Device = new("189819f1-1db6-4b57-be54-1821339b85f7");
     // GUID de IDMLDevice
-    private static readonly Guid IID_IDMLDevice = new Guid("64ac267a-4781-4354-a6d3-90d32b643501");
+    private static readonly Guid IID_IDMLDevice = new("64ac267a-4781-4354-a6d3-90d32b643501");
 
     // Enum para o nível de funcionalidade mínimo do D3D12 que o DirectML requer.
     // D3D_FEATURE_LEVEL_11_0 é um requisito comum para hardware moderno.
@@ -99,11 +101,11 @@ public static class DirectMLSupportChecker
             // Marshal.Release decrementa a contagem de referências do objeto COM.
             if (dmlDevicePtr != IntPtr.Zero)
             {
-                Marshal.Release(dmlDevicePtr);
+                _ = Marshal.Release(dmlDevicePtr);
             }
             if (d3d12DevicePtr != IntPtr.Zero)
             {
-                Marshal.Release(d3d12DevicePtr);
+                _ = Marshal.Release(d3d12DevicePtr);
             }
         }
     }
