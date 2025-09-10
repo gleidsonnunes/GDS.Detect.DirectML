@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0;net8.0</TargetFramework>
+    <RootNamespace>GDS.Detect.DirectML</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>DirectML Detection</PackageTags>
+    <LangVersion>latest</LangVersion>
+    <Version>1.0.0</Version>
+    <Authors>gleidsonnunes</Authors>
+    <Description>Detecta suporte a DirectML no sistema</Description>
+  </PropertyGroup>
+
+</Project>
